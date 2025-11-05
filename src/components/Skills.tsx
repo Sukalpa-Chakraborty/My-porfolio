@@ -45,10 +45,10 @@ const Skills = () => {
               className="animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="card-glass p-6 rounded-2xl hover:scale-105 transition-all duration-300">
+              <div className="card-glass p-6 rounded-2xl hover-lift">
                 <div className="flex justify-between items-center mb-3">
                   <h3 className="text-xl font-semibold">{skill.name}</h3>
-                  <span className="text-primary font-bold">{skill.level}%</span>
+                  <span className="text-primary font-bold animate-fade-in" style={{ animationDelay: `${index * 0.1 + 0.5}s` }}>{skill.level}%</span>
                 </div>
                 <div className="w-full bg-secondary rounded-full h-3 overflow-hidden">
                   <div 

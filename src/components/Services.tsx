@@ -35,12 +35,12 @@ const Services = () => {
             return (
               <div 
                 key={service.title}
-                className="card-glass p-8 rounded-2xl hover:scale-105 transition-all duration-300 animate-slide-up group"
+                className="card-glass p-8 rounded-2xl hover-lift animate-scale-in group"
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
                 <div className="mb-6 relative">
                   <div className="absolute inset-0 bg-primary/20 rounded-full blur-xl group-hover:blur-2xl transition-all"></div>
-                  <Icon className="w-16 h-16 text-primary relative z-10 group-hover:scale-110 transition-transform" />
+                  <Icon className="w-16 h-16 text-primary relative z-10 group-hover:scale-110 transition-transform animate-float" style={{ animationDelay: `${index * 0.3}s` }} />
                 </div>
                 <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{service.description}</p>

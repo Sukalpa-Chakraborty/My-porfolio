@@ -37,9 +37,9 @@ const Contact = () => {
         </p>
         
         <div className="grid md:grid-cols-2 gap-12">
-          <div className="space-y-6 animate-slide-up">
-            <div className="card-glass p-6 rounded-2xl">
-              <Mail className="w-12 h-12 text-primary mb-4" />
+          <div className="space-y-6 animate-slide-in-left">
+            <div className="card-glass p-6 rounded-2xl hover-lift">
+              <Mail className="w-12 h-12 text-primary mb-4 animate-float" />
               <h3 className="text-xl font-semibold mb-2">Email Me</h3>
               <a 
                 href="mailto:sukapa@gmail.com" 
@@ -49,18 +49,18 @@ const Contact = () => {
               </a>
             </div>
             
-            <div className="card-glass p-6 rounded-2xl">
+            <div className="card-glass p-6 rounded-2xl hover-lift stagger-2">
               <h3 className="text-xl font-semibold mb-4">Quick Info</h3>
               <ul className="space-y-3 text-muted-foreground">
-                <li className="flex items-start gap-2">
+                <li className="flex items-start gap-2 animate-fade-in stagger-1">
                   <span className="text-primary">•</span>
                   <span>Available for freelance work</span>
                 </li>
-                <li className="flex items-start gap-2">
+                <li className="flex items-start gap-2 animate-fade-in stagger-2">
                   <span className="text-primary">•</span>
                   <span>Open to collaboration</span>
                 </li>
-                <li className="flex items-start gap-2">
+                <li className="flex items-start gap-2 animate-fade-in stagger-3">
                   <span className="text-primary">•</span>
                   <span>Response time: 24-48 hours</span>
                 </li>
@@ -68,8 +68,8 @@ const Contact = () => {
             </div>
           </div>
           
-          <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            <form onSubmit={handleSubmit} className="card-glass p-8 rounded-2xl space-y-6">
+          <div className="animate-slide-in-right">
+            <form onSubmit={handleSubmit} className="card-glass p-8 rounded-2xl space-y-6 hover-lift">
               <div>
                 <Input
                   type="text"
