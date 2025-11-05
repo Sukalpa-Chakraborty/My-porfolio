@@ -46,10 +46,10 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out ${
           isScrolled
-            ? "bg-background/95 backdrop-blur-md border-b border-border/50 shadow-lg"
-            : "bg-transparent"
+            ? "bg-background/95 backdrop-blur-md border-b border-border/50 shadow-lg py-0"
+            : "bg-transparent py-2"
         }`}
       >
         <div className="container max-w-6xl mx-auto px-4">
@@ -57,7 +57,7 @@ const Navbar = () => {
             {/* Logo */}
             <button
               onClick={() => scrollToSection("#home")}
-              className="text-2xl font-bold text-gradient hover:scale-105 transition-transform"
+              className="text-2xl font-bold text-gradient hover:scale-110 transition-all duration-300"
             >
               SC
             </button>
@@ -68,10 +68,10 @@ const Navbar = () => {
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className={`px-4 py-2 rounded-full font-medium transition-all duration-300 ${
+                  className={`px-4 py-2 rounded-full font-medium transition-all duration-500 ease-in-out transform ${
                     activeSection === item.href.substring(1)
-                      ? "bg-primary/20 text-primary"
-                      : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
+                      ? "bg-primary/20 text-primary scale-105 shadow-lg"
+                      : "text-muted-foreground hover:text-foreground hover:bg-secondary/50 hover:scale-105"
                   }`}
                 >
                   {item.name}
@@ -98,23 +98,22 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed top-16 left-0 right-0 z-40 md:hidden transition-all duration-300 ${
+        className={`fixed top-16 left-0 right-0 z-40 md:hidden transition-all duration-500 ease-in-out ${
           isMobileMenuOpen
             ? "opacity-100 translate-y-0"
             : "opacity-0 -translate-y-4 pointer-events-none"
         }`}
       >
-        <div className="card-glass m-4 rounded-2xl p-6 space-y-2 animate-scale-in">
+        <div className="card-glass m-4 rounded-2xl p-6 space-y-2">
           {navItems.map((item, index) => (
             <button
               key={item.name}
               onClick={() => scrollToSection(item.href)}
-              className={`w-full text-left px-4 py-3 rounded-xl font-medium transition-all duration-300 animate-fade-in ${
+              className={`w-full text-left px-4 py-3 rounded-xl font-medium transition-all duration-500 ease-in-out transform hover:scale-102 ${
                 activeSection === item.href.substring(1)
-                  ? "bg-primary/20 text-primary"
+                  ? "bg-primary/20 text-primary shadow-lg"
                   : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
               }`}
-              style={{ animationDelay: `${index * 0.05}s` }}
             >
               {item.name}
             </button>

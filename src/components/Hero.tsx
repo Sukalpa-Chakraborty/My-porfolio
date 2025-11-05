@@ -38,13 +38,13 @@ const Hero = () => {
             </Button>
           </div>
           
-          <div className="flex-shrink-0 animate-fade-in" style={{ animationDelay: "0.3s" }}>
-            <div className="relative">
-              <div className="absolute inset-0 bg-primary/20 rounded-full blur-2xl animate-pulse"></div>
+          <div className="flex-shrink-0 animate-fade-in group" style={{ animationDelay: "0.3s" }}>
+            <div className="relative cursor-pointer">
+              <div className="absolute inset-0 bg-primary/20 rounded-full blur-2xl group-hover:bg-primary/30 group-hover:blur-3xl transition-all duration-500"></div>
               <img 
                 src={profileImage} 
-                alt="Sukalpa Chakraborty" 
-                className="relative w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-primary/50 shadow-2xl"
+                alt="Sukalpa Chakraborty - Full Stack Developer" 
+                className="relative w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-primary/50 group-hover:border-primary group-hover:scale-105 group-hover:rotate-3 transition-all duration-500 shadow-2xl"
               />
             </div>
           </div>
