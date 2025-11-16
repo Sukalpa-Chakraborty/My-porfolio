@@ -1,44 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 import profileImage from "@/assets/profile.jpg";
-import { useEffect, useRef, useState } from "react";
-
-const skills = [
-  { name: "Python", level: 85, color: "hsl(190 85% 55%)" },
-  { name: "Node.js", level: 80, color: "hsl(195 85% 55%)" },
-  { name: "React", level: 85, color: "hsl(200 85% 55%)" },
-  { name: "MongoDB", level: 75, color: "hsl(190 85% 55%)" },
-  { name: "C#", level: 75, color: "hsl(200 85% 55%)" },
-];
 
 const Hero = () => {
-  const [inView, setInView] = useState(false);
-  const sectionRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setInView(true);
-        }
-      },
-      { threshold: 0.2 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <section ref={sectionRef} className="min-h-screen flex items-center justify-center px-4 py-20 relative">
+    <section className="min-h-screen flex items-center justify-center px-4 py-20 relative">
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float"></div>
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float" style={{ animationDelay: "1s" }}></div>
@@ -76,28 +47,6 @@ const Hero = () => {
                 className="relative w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-primary/50 group-hover:border-primary group-hover:scale-105 group-hover:rotate-3 transition-all duration-500 shadow-2xl"
               />
             </div>
-          </div>
-        </div>
-
-        {/* Skills Section */}
-        <div className="mt-20 animate-fade-in" style={{ animationDelay: "0.6s" }}>
-          <h3 className="text-3xl font-bold text-center mb-10">
-            Technical <span className="text-gradient">Skills</span>
-          </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {skills.map((skill, index) => (
-              <div 
-                key={skill.name}
-                className="animate-scale-in"
-                style={{ animationDelay: `${index * 0.1 + 0.7}s` }}
-              >
-                <div className="card-glass p-4 rounded-xl hover-lift">
-                  <div className="flex items-center justify-center">
-                    <h4 className="text-base font-semibold">{skill.name}</h4>
-                  </div>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </div>
