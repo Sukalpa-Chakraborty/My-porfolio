@@ -4,13 +4,11 @@ import profileImage from "@/assets/profile.jpg";
 import { useEffect, useRef, useState } from "react";
 
 const skills = [
-  { name: "C", level: 85, color: "hsl(190 85% 55%)" },
-  { name: "C++", level: 80, color: "hsl(195 85% 55%)" },
-  { name: "C#", level: 75, color: "hsl(200 85% 55%)" },
   { name: "Python", level: 85, color: "hsl(190 85% 55%)" },
   { name: "Node.js", level: 80, color: "hsl(195 85% 55%)" },
   { name: "React", level: 85, color: "hsl(200 85% 55%)" },
   { name: "MongoDB", level: 75, color: "hsl(190 85% 55%)" },
+  { name: "C#", level: 75, color: "hsl(200 85% 55%)" },
 ];
 
 const Hero = () => {
@@ -94,19 +92,8 @@ const Hero = () => {
                 style={{ animationDelay: `${index * 0.1 + 0.7}s` }}
               >
                 <div className="card-glass p-4 rounded-xl hover-lift">
-                  <div className="flex flex-col items-center mb-2">
-                    <h4 className="text-sm font-semibold mb-1">{skill.name}</h4>
-                    <span className="text-xs text-primary font-bold">{skill.level}%</span>
-                  </div>
-                  <div className="w-full bg-secondary rounded-full h-2 overflow-hidden">
-                    <div 
-                      className="h-full rounded-full transition-all duration-1000 ease-out"
-                      style={{
-                        width: inView ? `${skill.level}%` : '0%',
-                        backgroundColor: skill.color,
-                        boxShadow: `0 0 10px ${skill.color}`,
-                      }}
-                    />
+                  <div className="flex items-center justify-center">
+                    <h4 className="text-base font-semibold">{skill.name}</h4>
                   </div>
                 </div>
               </div>
