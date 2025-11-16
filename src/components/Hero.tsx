@@ -30,12 +30,27 @@ const Hero = () => {
               Passionate about building modern web applications and exploring the intersection of software engineering and artificial intelligence.
             </p>
             <Button 
-              onClick={() => scrollToSection("skills")}
+              onClick={() => scrollToSection("about")}
               className="group bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-6 text-lg rounded-full glow-effect transition-all duration-300 hover:scale-105"
             >
               View My Work
               <ChevronDown className="ml-2 group-hover:translate-y-1 transition-transform" />
             </Button>
+
+            {/* Tech Stack */}
+            <div className="mt-12">
+              <div className="flex flex-wrap justify-center gap-4">
+                {["Python", "React", "Node.js", "MongoDB"].map((tech, index) => (
+                  <div 
+                    key={tech}
+                    className="card-glass px-6 py-3 rounded-full hover-lift animate-scale-in"
+                    style={{ animationDelay: `${index * 0.1 + 0.5}s` }}
+                  >
+                    <span className="text-sm md:text-base font-semibold text-gradient">{tech}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
           
           <div className="flex-shrink-0 animate-fade-in group" style={{ animationDelay: "0.3s" }}>
