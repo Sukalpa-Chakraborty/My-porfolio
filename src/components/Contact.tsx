@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Send } from "lucide-react";
+import { Mail, Send, MapPin, Instagram, Linkedin, Github } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -42,14 +42,50 @@ const Contact = () => {
               <Mail className="w-12 h-12 text-primary mb-4 animate-float" />
               <h3 className="text-xl font-semibold mb-2">Email Me</h3>
               <a 
-                href="mailto:sukapa@gmail.com" 
+                href="mailto:sukalpa2005@gmail.com" 
                 className="text-primary hover:text-primary/80 transition-colors text-lg"
               >
-                sukapa@gmail.com
+                sukalpa2005@gmail.com
               </a>
             </div>
-            
+
+            <div className="card-glass p-6 rounded-2xl hover-lift stagger-1">
+              <MapPin className="w-12 h-12 text-primary mb-4 animate-float" style={{ animationDelay: "0.2s" }} />
+              <h3 className="text-xl font-semibold mb-2">Location</h3>
+              <p className="text-muted-foreground text-lg">Durgapur, India</p>
+            </div>
+
             <div className="card-glass p-6 rounded-2xl hover-lift stagger-2">
+              <h3 className="text-xl font-semibold mb-4">Connect With Me</h3>
+              <div className="flex gap-4">
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 text-primary transition-all duration-300 hover:scale-110"
+                >
+                  <Instagram className="w-6 h-6" />
+                </a>
+                <a
+                  href="https://linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 text-primary transition-all duration-300 hover:scale-110"
+                >
+                  <Linkedin className="w-6 h-6" />
+                </a>
+                <a
+                  href="https://github.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 text-primary transition-all duration-300 hover:scale-110"
+                >
+                  <Github className="w-6 h-6" />
+                </a>
+              </div>
+            </div>
+            
+            <div className="card-glass p-6 rounded-2xl hover-lift stagger-3">
               <h3 className="text-xl font-semibold mb-4">Quick Info</h3>
               <ul className="space-y-3 text-muted-foreground">
                 <li className="flex items-start gap-2 animate-fade-in stagger-1">
