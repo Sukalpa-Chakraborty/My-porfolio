@@ -48,24 +48,6 @@ const About = () => {
             </div>
           </div>
         </div>
-
-        {/* Tech Stack */}
-        <div className="mt-20 animate-fade-in" style={{ animationDelay: "0.6s" }}>
-          <h3 className="text-3xl font-bold text-center mb-10">
-            Tech <span className="text-gradient">Stack</span>
-          </h3>
-          <div className="flex flex-wrap justify-center gap-6">
-            {["Python", "React", "Node.js", "MongoDB"].map((tech, index) => (
-              <div 
-                key={tech}
-                className="card-glass px-8 py-4 rounded-full hover-lift animate-scale-in"
-                style={{ animationDelay: `${index * 0.1 + 0.7}s` }}
-              >
-                <span className="text-lg font-semibold text-gradient">{tech}</span>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );
