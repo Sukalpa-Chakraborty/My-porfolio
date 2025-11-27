@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ChevronDown, Instagram, Linkedin, Github } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import profileImage from "@/assets/profile.jpg";
 import { useState, useEffect } from "react";
 
@@ -51,7 +51,7 @@ const Hero = () => {
 
             {/* Tech Stack - Animated Cycling */}
             <div className="mt-12">
-              <div className="flex justify-center items-center gap-4">
+              <div className="flex justify-center md:justify-start items-center gap-4">
                 <span className="text-muted-foreground">Skilled in</span>
                 <div className="relative h-12 w-32 overflow-hidden">
                   {techStack.map((tech, index) => (
@@ -68,34 +68,6 @@ const Hero = () => {
                   ))}
                 </div>
               </div>
-            </div>
-
-            {/* Social Links */}
-            <div className="mt-8 flex justify-center gap-4 animate-fade-in" style={{ animationDelay: "0.9s" }}>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 text-primary transition-all duration-300 hover:scale-110"
-              >
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 text-primary transition-all duration-300 hover:scale-110"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 text-primary transition-all duration-300 hover:scale-110"
-              >
-                <Github className="w-5 h-5" />
-              </a>
             </div>
           </div>
           
