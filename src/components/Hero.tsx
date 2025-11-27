@@ -22,11 +22,6 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen flex items-center justify-center px-4 py-20 relative">
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float" style={{ animationDelay: "1s" }}></div>
-      </div>
-      
       <div className="container max-w-6xl mx-auto relative z-10">
         <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
           <div className="flex-1 text-center md:text-left animate-slide-up">
