@@ -1,8 +1,20 @@
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Instagram, Linkedin, Github } from "lucide-react";
 import profileImage from "@/assets/profile.jpg";
+import { useState, useEffect } from "react";
+
+const techStack = ["Python", "React", "Node.js", "MongoDB"];
 
 const Hero = () => {
+  const [currentTechIndex, setCurrentTechIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTechIndex((prev) => (prev + 1) % techStack.length);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, []);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: "smooth" });
@@ -37,18 +49,24 @@ const Hero = () => {
               <ChevronDown className="ml-2 group-hover:translate-y-1 transition-transform" />
             </Button>
 
-            {/* Tech Stack */}
+            {/* Tech Stack - Animated Cycling */}
             <div className="mt-12">
-              <div className="flex flex-wrap justify-center gap-4">
-                {["Python", "React", "Node.js", "MongoDB"].map((tech, index) => (
-                  <div 
-                    key={tech}
-                    className="card-glass px-6 py-3 rounded-full hover-lift animate-scale-in"
-                    style={{ animationDelay: `${index * 0.1 + 0.5}s` }}
-                  >
-                    <span className="text-sm md:text-base font-semibold text-gradient">{tech}</span>
-                  </div>
-                ))}
+              <div className="flex justify-center items-center gap-4">
+                <span className="text-muted-foreground">Skilled in</span>
+                <div className="relative h-12 w-32 overflow-hidden">
+                  {techStack.map((tech, index) => (
+                    <div
+                      key={tech}
+                      className={`absolute inset-0 flex items-center justify-center card-glass px-6 py-3 rounded-full transition-all duration-500 ${
+                        index === currentTechIndex
+                          ? "opacity-100 translate-y-0"
+                          : "opacity-0 translate-y-8"
+                      }`}
+                    >
+                      <span className="text-sm md:text-base font-semibold text-gradient whitespace-nowrap">{tech}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
 
