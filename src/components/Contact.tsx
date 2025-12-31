@@ -79,7 +79,7 @@ const Contact = () => {
               <h3 className="text-xl font-semibold mb-4">Connect With Me</h3>
               <div className="flex gap-4">
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/sukalpa.0001/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 text-primary transition-all duration-300 hover:scale-110"
@@ -87,7 +87,7 @@ const Contact = () => {
                   <Instagram className="w-6 h-6" />
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/sukalpa-chakraborty/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 text-primary transition-all duration-300 hover:scale-110"
@@ -95,7 +95,7 @@ const Contact = () => {
                   <Linkedin className="w-6 h-6" />
                 </a>
                 <a
-                  href="https://github.com"
+                  href="https://github.com/Sukalpa-Chakraborty"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 text-primary transition-all duration-300 hover:scale-110"
